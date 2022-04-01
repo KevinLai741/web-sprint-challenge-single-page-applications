@@ -13,7 +13,6 @@ const PizzaForm = (props) => {
         const valueToUse = type === 'checkbox' ? checked : value;
         change(name, valueToUse);
     }
-
   
     return (
        <form id='pizza-form' onSubmit={onSubmit}>
@@ -28,7 +27,6 @@ const PizzaForm = (props) => {
                maxLength='30'
                />
            </label>
-
            <label>Size
                <select id='size-dropdown' name='size' value={values.size} onChange={onChange}>
                     <option value="">---Select---</option>
@@ -38,7 +36,6 @@ const PizzaForm = (props) => {
                     <option value="XXX">XXX</option>
                </select>
            </label>
-
             <div className='toppings'>
                 <h4>Toppings</h4>
                 <label>Sausage
@@ -49,7 +46,6 @@ const PizzaForm = (props) => {
                         onChange={onChange}
                     />
                 </label>
-                
                 <label>Pineapple 
                     <input 
                         type='checkbox'
@@ -58,7 +54,6 @@ const PizzaForm = (props) => {
                         onChange={onChange}
                     />
                 </label>
-
                 <label>Jalapeno
                     <input 
                         type='checkbox'
@@ -67,7 +62,6 @@ const PizzaForm = (props) => {
                         onChange={onChange}
                     />
                 </label>
-
                 <label>Beef
                     <input 
                         type='checkbox'
@@ -77,7 +71,6 @@ const PizzaForm = (props) => {
                     />
                 </label>
             </div>
-            
                 <label>Special Instructions 
                     <input 
                         id="special-text"
@@ -89,15 +82,12 @@ const PizzaForm = (props) => {
                         maxLength='50'
                     />
                 </label>
-
                 <button id='order-button' disabled={disabled}>Add to Order</button>
-
                 <div className='errors'>
                     <div>{errors.name}</div>
                     <div>{errors.size}</div>
                 </div>
        </form>
-
     )
 }
 
